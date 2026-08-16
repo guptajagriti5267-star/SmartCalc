@@ -1,4 +1,8 @@
-# SmartCalc 🧮
+# Jagriti Portfolio 🌐
+
+This project is created as part of my **CodeAlpha Internship Task**.
+
+A responsive personal portfolio website showcasing my skills, projects, and learning journey.
 
 A responsive scientific calculator built using HTML, CSS, and JavaScript.
 
