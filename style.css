@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+:root {
+    --bg: #f4f6f8;
+    --calculator: #ffffff;
+    --display: #f1f3f5;
+    --button: #e9ecef;
+    --text: #222;
+    --operator: #dbeafe;
+    --scientific: #ede9fe;
+    --equal: #2563eb;
+    --history: #ffffff;
+}
+
+body.dark {
+    --bg: #111827;
+    --calculator: #1f2937;
+    --display: #111827;
+    --button: #374151;
+    --text: #ffffff;
+    --operator: #1e3a5f;
+    --scientific: #40345c;
+    --equal: #2563eb;
+    --history: #1f2937;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    transition: 0.3s;
+}
+
+.app {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    padding: 20px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.top-bar h1 {
+    font-size: 28px;
+}
+
+.theme-btn {
+    border: none;
+    background: var(--button);
+    padding: 10px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.calculator {
+    background: var(--calculator);
+    padding: 18px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.display-area {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+#display {
+    width: 100%;
+    height: 75px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background: var(--display);
+    color: var(--text);
+    font-size: 28px;
+    padding: 15px;
+    text-align: right;
+}
+
+.copy-btn {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var(--text);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+}
+
+.buttons button {
+    height: 55px;
+    border: none;
+    border-radius: 12px;
+    background: var(--button);
+    color: var(--text);
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.buttons button:hover {
+    transform: scale(1.04);
+}
+
+.buttons button:active {
+    transform: scale(0.96);
+}
+
+.operator {
+    background: var(--operator) !important;
+}
+
+.function {
+    background: #fee2e2 !important;
+}
+
+.scientific {
+    background: var(--scientific) !important;
+}
+
+.equals {
+    grid-column: span 4;
+    background: var(--equal) !important;
+    color: white !important;
+    font-size: 22px !important;
+}
+
+.history-section {
+    margin-top: 20px;
+    background: var(--history);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.history-header h2 {
+    font-size: 18px;
+}
+
+#clearHistoryBtn {
+    border: none;
+    background: #ef4444;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.history-item {
+    padding: 9px;
+    margin-bottom: 6px;
+    background: var(--display);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.history-item:hover {
+    opacity: 0.8;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+@media (max-width: 400px) {
+
+    .app {
+        padding: 12px;
+    }
+
+    .calculator {
+        padding: 12px;
+    }
+
+    .buttons {
+        gap: 6px;
+    }
+
+    .buttons button {
+        height: 48px;
+        font-size: 15px;
+    }
+
+    #display {
+        font-size: 23px;
+    }
+}

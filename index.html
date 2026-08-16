@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCalc - Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <div class="top-bar">
+            <h1>SmartCalc</h1>
+            <button id="themeBtn" class="theme-btn">🌙</button>
+        </div>
+
+        <div class="calculator">
+
+            <div class="display-area">
+                <input type="text" id="display" readonly placeholder="0">
+                <button id="copyBtn" class="copy-btn">📋 Copy</button>
+            </div>
+
+            <div class="buttons">
+
+                <button class="function" onclick="clearDisplay()">AC</button>
+                <button class="function" onclick="deleteLast()">DEL</button>
+                <button class="operator" onclick="appendValue('%')">%</button>
+                <button class="operator" onclick="appendValue('/')">÷</button>
+
+                <button onclick="appendValue('7')">7</button>
+                <button onclick="appendValue('8')">8</button>
+                <button onclick="appendValue('9')">9</button>
+                <button class="operator" onclick="appendValue('*')">×</button>
+
+                <button onclick="appendValue('4')">4</button>
+                <button onclick="appendValue('5')">5</button>
+                <button onclick="appendValue('6')">6</button>
+                <button class="operator" onclick="appendValue('-')">−</button>
+
+                <button onclick="appendValue('1')">1</button>
+                <button onclick="appendValue('2')">2</button>
+                <button onclick="appendValue('3')">3</button>
+                <button class="operator" onclick="appendValue('+')">+</button>
+
+                <button onclick="appendValue('0')">0</button>
+                <button onclick="appendValue('.')">.</button>
+                <button class="operator" onclick="appendValue('(')">(</button>
+                <button class="operator" onclick="appendValue(')')">)</button>
+
+                <button class="scientific" onclick="squareRoot()">√</button>
+                <button class="scientific" onclick="square()">x²</button>
+                <button class="scientific" onclick="inverse()">1/x</button>
+                <button class="scientific" onclick="appendValue('Math.PI')">π</button>
+
+                <button class="scientific" onclick="sinValue()">sin</button>
+                <button class="scientific" onclick="cosValue()">cos</button>
+                <button class="scientific" onclick="tanValue()">tan</button>
+                <button class="scientific" onclick="logValue()">log</button>
+
+                <button class="equals" onclick="calculate()">=</button>
+
+            </div>
+        </div>
+
+        <div class="history-section">
+            <div class="history-header">
+                <h2>Calculation History</h2>
+                <button id="clearHistoryBtn">Clear</button>
+            </div>
+
+            <div id="history"></div>
+        </div>
+
+        <footer>
+            SmartCalc • Built with HTML, CSS & JavaScript
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
